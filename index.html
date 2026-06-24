@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RevealMyIntrest — Find Your Field</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<div class="wrap">
+
+  <!-- ===================== INTRO ===================== -->
+  <section id="screen-intro" class="screen active">
+    <div class="eyebrow"><b>RevealMyIntrest</b> · a field-interest self-check · 24 statements · 4 paths</div>
+    <h1 class="headline">
+      <span class="electronics">Electronics.</span>
+      <span class="software">Software &amp; IT.</span>
+      <span class="manpower">Hands-On Work.</span>
+      <span class="bpa">Business Process.</span>
+      <span class="ask">Which one is actually yours?</span>
+    </h1>
+    <p class="lede">
+      Most of us end up choosing a field because of marks, family pressure, or what a senior
+      told us pays well — not because of what we actually pay attention to. This self-check
+      looks at how you react to the kind of problems each field hands you day to day. Answer
+      honestly, not how you'd answer in an interview.
+    </p>
+    <div class="meta-row">
+      <span><b>24</b> statements</span>
+      <span><b>4</b> paths</span>
+      <span><b>~4</b> min</span>
+      <span>No data saved or sent anywhere</span>
+    </div>
+    <button class="btn-primary" id="start-btn">Begin the self-check →</button>
+
+    <div class="path-grid">
+      <div class="path-card electronics">
+        <div class="pc-name">Electronics</div>
+        <div class="pc-desc">Circuits, devices, embedded systems — work you can hold in your hand.</div>
+      </div>
+      <div class="path-card software">
+        <div class="pc-name">Software &amp; IT</div>
+        <div class="pc-desc">Code, apps, systems — work you solve by thinking, on a screen.</div>
+      </div>
+      <div class="path-card manpower">
+        <div class="pc-name">Manpower / Field Work</div>
+        <div class="pc-desc">On-site, hands-on, physically active — technician, supervision, logistics.</div>
+      </div>
+      <div class="path-card bpa">
+        <div class="pc-name">BPA — Business Process</div>
+        <div class="pc-desc">Structured office work — documentation, process, customer-facing roles.</div>
+      </div>
+    </div>
+
+    <p class="note-aside">
+      Note: "BPA" here means Business Process / back-office &amp; admin work (the kind of role
+      common in BPO, ITES, and corporate operations) — not a performing-arts degree.
+    </p>
+  </section>
+
+  <!-- ===================== QUIZ ===================== -->
+  <section id="screen-quiz" class="screen">
+    <div class="quiz-top">
+      <button class="back-link" id="back-btn">← back</button>
+      <span class="progress-text" id="progress-text">Question 1 of 24</span>
+    </div>
+    <div class="progress-track"><div class="progress-fill" id="progress-fill" style="width:0%"></div></div>
+
+    <div class="q-cat" id="q-cat">About electronics &amp; hardware</div>
+    <h2 class="q-text" id="q-text">—</h2>
+
+    <div class="scale-wrap">
+      <div class="scale-track"></div>
+      <div class="scale-dots" id="scale-dots"></div>
+      <div class="scale-labels">
+        <span id="label-left">Strongly disagree</span>
+        <span id="label-right">Strongly agree</span>
+      </div>
+      <div class="scale-mid">tap the circle closest to how true this feels for you</div>
+    </div>
+  </section>
+
+  <!-- ===================== RESULT ===================== -->
+  <section id="screen-result" class="screen">
+    <div class="result-eyebrow">Your result</div>
+    <div class="result-pct"><span id="result-pct-num">0</span><sup id="result-pct-sup">% pull toward —</sup></div>
+    <div class="result-title" id="result-title">—</div>
+    <p class="result-blurb" id="result-blurb">—</p>
+    <p class="result-second hidden" id="result-second">—</p>
+
+    <div class="ring-section">
+      <div class="ring-wrap" id="ring-wrap"></div>
+      <div class="legend" id="legend"></div>
+    </div>
+
+    <div class="breakdown">
+      <h3>Breakdown by field</h3>
+      <div id="cat-rows"></div>
+    </div>
+
+    <p class="closing">
+      This isn't a verdict — it's a snapshot of where your attention goes when no one's
+      grading you for it. Marks and placement trends matter too, but they shouldn't be the
+      only signal you act on. <strong>If your top pull and your current course don't match,
+      that gap is worth a real conversation</strong> — with a mentor, a senior already in
+      that field, or yourself — before placement season decides it for you.
+    </p>
+
+    <p class="disclaimer">
+      This is a self-reflection tool built by a student, not a certified career-counselling
+      instrument. Use it as one input among many.
+    </p>
+
+    <div class="btn-row">
+      <button class="btn-secondary" id="retake-btn">Retake the self-check</button>
+    </div>
+  </section>
+
+</div>
+<script src="assets/script.js"></script>
+</body>
+</html>
